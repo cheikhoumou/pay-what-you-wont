@@ -184,7 +184,23 @@ payNowBtn.addEventListener('click', () => {
     document.body.style.overflow = 'auto';
     
     // Redirect to thank you page
-    window.location.href = 'thanks.html';
+    
+    let sn = document.querySelector('.send');
+    const data = JSON.parse(localStorage.getItem('orderData'));
+    const courseName = data.course;
+    const coursePrice = data.price;
+    const userPhone = data.phone;
+     document.querySelector('.cours').value = courseName;
+     document.querySelector('.mony').value = coursePrice;
+     document.querySelector('.phone').value = userPhone;
+     sn.click();  
+
+    function senddatatosheet(){
+     window.location.href = 'https://raayeg.net/thank-you/';  
+    }
+    setTimeout(senddatatosheet, 1000);
+     // 
+
 });
 
 // Form validation helper functions
