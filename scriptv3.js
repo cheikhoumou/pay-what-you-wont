@@ -198,7 +198,7 @@ payNowBtn.addEventListener('click', () => {
     function senddatatosheet(){
      window.location.href = 'https://raayeg.net/thank-you/';  
     }
-    setTimeout(senddatatosheet, 1000);
+    setTimeout(senddatatosheet, 2000);
      // 
 
 });
